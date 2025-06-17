@@ -1,3 +1,4 @@
 [submodule "moodle"]
 	path = moodle
 	url = git://git.moodle.org/moodle.git
+	branch = MOODLE_500_STABLE
