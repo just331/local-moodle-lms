@@ -2,7 +2,7 @@ version: "3.8"
 services:
 
   db:
-    image: mariadb:10.5
+    image: mariadb:10.11
     restart: unless-stopped
     env_file: .env
     environment:
@@ -21,5 +21,6 @@ services:
     volumes:
       - ./moodle:/var/www/html
       - ./moodledata:/var/moodledata
+      - ./php-ini-overrides/zend-exception.ini:/usr/local/etc/php/conf.d/99-zend-exception.ini
     depends_on:
       - db
