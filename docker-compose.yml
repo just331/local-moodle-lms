@@ -14,7 +14,7 @@ services:
       - ./dbdata:/var/lib/mysql
 
   web:
-    image: moodlehq/moodle-php-apache:8.1
+    image: moodlehq/moodle-php-apache:8.2
     restart: unless-stopped
     ports:
       - "${WEB_PORT}:80"
