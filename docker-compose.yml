@@ -22,5 +22,7 @@ services:
       - ./moodle:/var/www/html
       - ./moodledata:/var/moodledata
       - ./php-ini-overrides/zend-exception.ini:/usr/local/etc/php/conf.d/99-zend-exception.ini
+      - ./php-ini-overrides/opcache.ini:/usr/local/etc/php/conf.d/10-opcache.ini
+
     depends_on:
       - db
